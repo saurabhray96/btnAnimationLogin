@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="grid justify-center mt-28 text-center">
+  <h1 class="mb-10 text-4xl font-bold text-purple-700 " style="filter: drop-shadow(2px 2px 3px green);">coderSpecial</h1>
+    <div class=" w-60 h-80 pt-5 font-bold shadow-lg shadow-red-400 rounded bg-cover" 
+    style="background-image:url(https://www.kolpaper.com/wp-content/uploads/2019/12/hd-love-wallpaper.jpg);">
+<span class="bg-violet-700 shadow-lg shadow-white text-white p-2 rounded ">Love Proposal</span>
+<div style="margin: 15%;" class="rounded w-40 h-20 bg-white ">Hey baby I want to <strike class="font-normal text-sm ">fuck</strike> <em class="font-normal">Love</em> you 💝</div>
+
+    <button id="Acceptbtn" style="margin-left: -100px;" class="fixed bg-green-600 text-white pl-2 font-normal pr-2 rounded ">Accepted</button>
+   <div onmouseover="change()" onmouseout="change2()" id="Rejected1" class=" w-28 ml-28 pt-5 pb-5 rounded-full " style="margin-top: -20px;">
+    <button id="Rejectedbtn" class="pl-2 pr-2 rounded font-normal bg-red-600 text-white ">Rejected</button></div>
+</div>
+<dialog id="dlog1" >
+  <div class="bg-white  pb-48 grid justify-items-center text-center "> 
+    
+  <img class="" src="https://media.tenor.com/images/2a8c16ba3bac31f0e39648de78e14406/tenor.gif" alt="">
+</dialog>
+<script>
+       let rejectbtn=document.getElementById("Rejectedbtn");
+       let acceptbtn=document.getElementById("Acceptbtn");
+       let dialog = document.getElementById("dlog1");
+       function change() {
+       rejectbtn.style.backgroundColor="green";
+        rejectbtn.innerHTML="Accepted";
+        acceptbtn.style.backgroundColor="red";
+        acceptbtn.innerHTML="Rejected";
+          }
+          function change2() {
+            rejectbtn.style.backgroundColor="red";
+         rejectbtn.innerHTML="Rejected";
+         acceptbtn.style.backgroundColor="green";
+        acceptbtn.innerHTML="Accepted";
+          }
+
+          document.getElementById("Acceptbtn").addEventListener("click",()=>{
+          dialog.open=true;
+          })
+          document.getElementById("Rejectedbtn").addEventListener("click",()=>{
+          dialog.open=true;
+          })
+          document.getElementById("dlog1").addEventListener("click",()=>{
+          dialog.open=false;
+          })
+</script>
+</body>
+</html>
